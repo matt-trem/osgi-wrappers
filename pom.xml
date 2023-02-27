@@ -7,13 +7,13 @@
 
     <groupId>net.emtee</groupId>
     <artifactId>osgi-wrappers</artifactId>
-    <version>0.0.1</version>
+    <version>0.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>Parent for OSGI Bundle wrappers</name>
 
     <modules>
-        <module>io-sentry-sentry</module>
+        <module>sentry</module>
     </modules>
 
     <properties>

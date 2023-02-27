@@ -1,2 +1,3 @@
-# osgi-io-sentry-sentry
-OSGI wrapper for Sentry Java JDK
+# OSGI wrappers
+
+Maven POM files that wrap non-OSGI Java libraries using `maven-bundle-plugin`

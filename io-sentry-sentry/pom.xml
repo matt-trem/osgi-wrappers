@@ -6,24 +6,23 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>com.collibracomprogram</groupId>
-        <artifactId>osgi-wrappers-parent</artifactId>
+        <groupId>net.emtee</groupId>
+        <artifactId>osgi-wrappers</artifactId>
         <version>0.0.1</version>
     </parent>
-    
+
     <properties>
         <library.groupId>io.sentry</library.groupId>
         <library.artifactId>sentry</library.artifactId>
         <library.version>6.14.0</library.version>
     </properties>
 
-    <groupId>net.emtee</groupId>
-    <artifactId>wrapped-${library.groupId}-${library.artifactId}</artifactId>
-    <version>${library.version}</version>
+    <artifactId>osgi-wrapper-sentry</artifactId>
+    <version>6.14.0</version>
     <packaging>bundle</packaging>
 
     <name>OSGI Bundle wrapper for Sentry Java SDK OSGI</name>
-    <description>OSGI Bundle wrapping ${library.groupId}:${library.artifactId}:${library.version}</description>
+    <description>OSGI Bundle wrapping ${library.groupId}:${library.artifactId}:${project.version}</description>
 
     <build>
         <plugins>
@@ -40,14 +39,14 @@
                     </instructions>
                 </configuration>
             </plugin>
-        </plugins>    
+        </plugins>
     </build>
 
     <dependencies>
         <dependency>
             <groupId>${library.groupId}</groupId>
             <artifactId>${library.artifactId}</artifactId>
-            <version>${library.version}</version>
+            <version>${project.version}</version>
         </dependency>
     </dependencies>
 

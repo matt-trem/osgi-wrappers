@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.collibracomprogram</groupId>
+    <artifactId>osgi-wrappers-parent</artifactId>
+    <version>0.0.1</version>
+    <packaging>pom</packaging>
+
+    <name>Parent for OSGI Bundle wrappers</name>
+
+    <modules>
+        <module>io-sentry-sentry</module>
+    </modules>
+
+    <properties>
+        <aem.host>http://localhost</aem.host>
+        <aem.port>4502</aem.port>
+    </properties>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <!-- Apache Sling Plugin -->
+                <plugin>
+                    <groupId>org.apache.sling</groupId>
+                    <artifactId>sling-maven-plugin</artifactId>
+                    <version>2.4.0</version>
+                    <configuration>
+                        <slingUrl>${aem.host}:${aem.port}/system/console</slingUrl>
+                        <deploymentMethod>WebConsole</deploymentMethod>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+
+    <profiles>
+        <!-- Development profile: install only the bundle -->
+        <profile>
+            <id>autoInstallBundle</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <build>
+                <pluginManagement>
+                    <plugins>
+                        <plugin>
+                            <groupId>org.apache.sling</groupId>
+                            <artifactId>sling-maven-plugin</artifactId>
+                            <executions>
+                                <execution>
+                                    <id>install-bundle</id>
+                                    <goals>
+                                        <goal>install</goal>
+                                    </goals>
+                                </execution>
+                            </executions>
+                        </plugin>
+                    </plugins>
+                </pluginManagement>
+            </build>
+        </profile>
+    </profiles>
+
+</project>

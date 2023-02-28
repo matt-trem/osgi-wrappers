@@ -24,6 +24,13 @@
     <name>OSGI Bundle wrapper for Sentry Java SDK OSGI</name>
     <description>OSGI Bundle wrapping ${library.groupId}:${library.artifactId}:${project.version}</description>
 
+    <licenses>
+        <license>
+            <name>The Apache License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
+
     <build>
         <plugins>
             <plugin>

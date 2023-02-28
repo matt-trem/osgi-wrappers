@@ -22,6 +22,17 @@
         <url>https://github.com/matt-trem/osgi-wrappers/tree/main</url>
     </scm>
 
+    <distributionManagement>
+        <snapshotRepository>
+            <id>ossrh</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+        </snapshotRepository>
+        <repository>
+            <id>ossrh</id>
+            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
+        </repository>
+    </distributionManagement>
+
     <properties>
         <aem.host>http://localhost</aem.host>
         <aem.port>4502</aem.port>

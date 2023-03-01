@@ -11,6 +11,8 @@
     <packaging>pom</packaging>
 
     <name>Parent for OSGI Bundle wrappers</name>
+    <description>Multi-module project for wraping non-OSGI Java libraries with maven-bundle-plugin</description>
+    <url>https://github.com/matt-trem/osgi-wrappers</url>
 
     <modules>
         <module>sentry</module>
@@ -21,6 +23,13 @@
         <developerConnection>scm:git:ssh://github.com:matt-trem/osgi-wrappers.git</developerConnection>
         <url>https://github.com/matt-trem/osgi-wrappers/tree/main</url>
     </scm>
+
+    <developers>
+        <developer>
+            <name>Matthieu Tremblay</name>
+            <url>http://github.com/matt-trem</url>
+        </developer>
+    </developers>
 
     <distributionManagement>
         <snapshotRepository>
@@ -118,5 +127,12 @@
             </build>
         </profile>
     </profiles>
+
+    <licenses>
+        <license>
+            <name>The Apache License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
 
 </project>

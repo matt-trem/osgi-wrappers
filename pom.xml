@@ -7,7 +7,7 @@
 
     <groupId>net.emtee</groupId>
     <artifactId>osgi-wrappers</artifactId>
-    <version>0.0.1</version>
+    <version>0.0.2</version>
     <packaging>pom</packaging>
 
     <name>Parent for OSGI Bundle wrappers</name>
@@ -16,6 +16,7 @@
 
     <modules>
         <module>sentry</module>
+        <module>sentry-logback</module>
     </modules>
 
     <scm>

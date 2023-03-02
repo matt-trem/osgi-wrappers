@@ -13,15 +13,15 @@
 
     <properties>
         <library.groupId>io.sentry</library.groupId>
-        <library.artifactId>sentry</library.artifactId>
+        <library.artifactId>sentry-logback</library.artifactId>
         <library.version>6.14.0</library.version>
     </properties>
 
-    <artifactId>osgi-wrapper-sentry</artifactId>
+    <artifactId>osgi-wrapper-sentry-logback</artifactId>
     <version>6.14.0</version>
     <packaging>bundle</packaging>
 
-    <name>OSGI Bundle wrapper for Sentry Java SDK OSGI</name>
+    <name>OSGI Bundle wrapper for Sentry Logback</name>
     <description>OSGI Bundle wrapping ${library.groupId}:${library.artifactId}:${project.version}</description>
 
     <licenses>
